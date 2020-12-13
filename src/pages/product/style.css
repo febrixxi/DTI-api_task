@@ -1,0 +1,22 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.container {
+  margin: 20px 20px;
+  justify-content: space-between;
+  align-items: center;
+  width: 400px;
+  display: inline-flex;
+}
+
+.product .product-detail {
+  margin: 10px 0;
+}
+
+.product .product-price {
+  margin-top: 10px;
+  color: red;
+}

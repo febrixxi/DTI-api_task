@@ -7,6 +7,7 @@ import {
   InfoCorona,
   DetailDate,
 } from '../pages';
+import Product from '../pages/product';
 
 const routes = [
   {
@@ -17,6 +18,11 @@ const routes = [
   {
     path: '/profile',
     component: Profile,
+    isPublic: false,
+  },
+  {
+    path: '/product',
+    component: Product,
     isPublic: false,
   },
   {

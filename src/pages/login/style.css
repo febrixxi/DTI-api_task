@@ -1,0 +1,59 @@
+body {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  background: linear-gradient(to right, #dce35b, #45b649);
+}
+
+.loginPage {
+  position: absolute;
+  top: 30%;
+  left: 35%;
+  transform: translateY(-50%, -50%);
+  width: 400px;
+  background: white;
+  border-radius: 10px;
+  text-align: center;
+}
+
+.loginPage h2 {
+  padding: 0 0 20px 0;
+  border-bottom: 1px solid silver;
+}
+
+.loginPage form {
+  padding: 0 40px;
+  box-sizing: border-box;
+  text-align: center;
+}
+
+.loginPage form input {
+  padding: 10px 0;
+  margin: 10px auto;
+  width: 300px;
+  outline: none;
+  border: none;
+  border-bottom: 1px solid black;
+}
+
+.loginPage form .submit {
+  background-color: #4caf50;
+  border: none;
+  color: white;
+  padding: 8px 40px;
+  margin: 20px 0;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+}
+
+.loginPage form .submit:hover {
+  background-color: #3e8e41;
+}
+
+.loginPage form .submit:active {
+  background-color: #3e8e41;
+  box-shadow: 0 5px #666;
+  transform: translateY(4px);
+}

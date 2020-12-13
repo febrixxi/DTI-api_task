@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import { setCookie } from '../../utils/cookie';
 import { authService } from '../../services';
+import {} from './style.css';
 
 const Login = () => {
   const [username, setUsername] = useState('');
@@ -14,10 +15,10 @@ const Login = () => {
       .login(username, password)
       .then((res) => {
         const cookieToken = res.token;
-        const cookieUser = res.user;
+        const cookieUser = res.username;
         setCookie('userData', JSON.stringify(cookieUser), 10000);
         setCookie('token', JSON.stringify(cookieToken), 10000);
-        window.location.replace('/profile/:profileId');
+        window.location.replace('/');
       })
       .catch((err) => {
         console.log(err);
@@ -29,7 +30,7 @@ const Login = () => {
 
   return (
     <div className="loginPage">
-      <h2> Login Page</h2>
+      <h2>Login Page</h2>
       <form
         className="login_form"
         onSubmit={(e) => {
@@ -38,9 +39,9 @@ const Login = () => {
         }}
       >
         <label htmlFor="username">
-          Username :
           <input
             type="text"
+            placeholder="username"
             value={username}
             onChange={(e) => {
               setUsername(e.target.value);
@@ -48,16 +49,21 @@ const Login = () => {
           />
         </label>
         <label htmlFor="password">
-          Password :
           <input
             type="password"
+            placeholder="password"
             value={password}
             onChange={(e) => {
               setPassword(e.target.value);
             }}
           />
         </label>
-        <input type="submit" value="Submit" disabled={isLoginLoading} />
+        <input
+          className="submit"
+          type="submit"
+          value="Submit"
+          disabled={isLoginLoading}
+        />
       </form>
     </div>
   );
